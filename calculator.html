@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Scientific Calculator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #1f1c2c, #928dab);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .calculator {
+      background: #2b2b2b;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .display {
+      background: #000;
+      color: #0f0;
+      font-size: 2rem;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: right;
+      margin-bottom: 20px;
+      word-wrap: break-word;
+      min-height: 60px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      background: #3e3e3e;
+      color: #fff;
+      font-size: 1rem;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #5c5cff;
+    }
+
+    .operator {
+      background: #ff6b6b;
+    }
+
+    .operator:hover {
+      background: #ff8787;
+    }
+
+    .equal {
+      background: #00c9a7;
+      grid-column: span 2;
+    }
+
+    .equal:hover {
+      background: #20e0c1;
+    }
+
+    .clear {
+      background: #f39c12;
+      grid-column: span 2;
+    }
+
+    .clear:hover {
+      background: #f1c40f;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 500px) {
+      .display {
+        font-size: 1.5rem;
+        padding: 12px;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+
+      .buttons {
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .calculator {
+        padding: 15px;
+      }
+
+      .display {
+        font-size: 1.2rem;
+      }
+
+      button {
+        font-size: 0.8rem;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <div class="display" id="display">0</div>
+  <div class="buttons">
+    <button class="operator">sin</button>
+    <button class="operator">cos</button>
+    <button class="operator">tan</button>
+    <button class="operator">√</button>
+    <button class="operator">log</button>
+
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button class="operator">/</button>
+    <button class="operator">π</button>
+
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button class="operator">*</button>
+    <button class="operator">^</button>
+
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button class="operator">-</button>
+    <button class="operator">(</button>
+
+    <button>0</button>
+    <button>.</button>
+    <button class="equal">=</button>
+    <button class="operator">+</button>
+    <button class="operator">)</button>
+
+    <button class="clear">AC</button>
+    <button class="operator">DEL</button>
+  </div>
+</div>
+
+</body>
+</html>
